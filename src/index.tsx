@@ -15,15 +15,6 @@ if (!meetingArgs.sdkKey || !meetingArgs.topic || !meetingArgs.name || !meetingAr
   meetingArgs = { ...devConfig, ...meetingArgs };
 }
 
-const queryParameters = new URLSearchParams(window.location.search);
-const meetingId = queryParameters.get('meetingId');
-
-console.log(meetingArgs);
-
-// if (meetingId) {
-//   meetingArgs.sessionKey = meetingId;
-// }
-
 if (meetingArgs.web && meetingArgs.web !== '0') {
   ['topic', 'name', 'password', 'sessionKey', 'userIdentity'].forEach((field) => {
     if (Object.hasOwn(meetingArgs, field)) {
