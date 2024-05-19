@@ -629,21 +629,7 @@ const VideoFooter = (props: VideoFooterProps) => {
           <TranscriptionSubtitle text={caption.text} />
         </>
       )}
-      {liveStreamClient?.isLiveStreamEnabled() && zmClient.isHost() && (
-        <>
-          <LiveStreamButton
-            isLiveStreamOn={liveStreamStatus === LiveStreamStatus.InProgress}
-            onLiveStreamClick={onLiveStreamClick}
-          />
-          <LiveStreamModal
-            visible={liveStreamVisible}
-            setVisible={setLiveStreamVisible}
-            onStartLiveStream={(streanUrl: string, streamKey: string, broadcastUrl: string) => {
-              liveStreamClient.startLiveStream(streanUrl, streamKey, broadcastUrl);
-            }}
-          />
-        </>
-      )}
+
       {liveStreamStatus === LiveStreamStatus.InProgress && (
         <IconFont type="icon-live" style={{ position: 'fixed', top: '45px', left: '10px', color: '#f00' }} />
       )}
