@@ -15,6 +15,15 @@ if (!meetingArgs.sdkKey || !meetingArgs.topic || !meetingArgs.name || !meetingAr
   meetingArgs = { ...devConfig, ...meetingArgs };
 }
 
+const queryParameters = new URLSearchParams(window.location.search);
+const meetingId = queryParameters.get('meetingId');
+
+console.log(meetingArgs);
+
+// if (meetingId) {
+//   meetingArgs.sessionKey = meetingId;
+// }
+
 if (meetingArgs.web && meetingArgs.web !== '0') {
   ['topic', 'name', 'password', 'sessionKey', 'userIdentity'].forEach((field) => {
     if (Object.hasOwn(meetingArgs, field)) {
@@ -92,8 +101,4 @@ root.render(
     </ZoomContext.Provider>
   </React.StrictMode>
 );
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();

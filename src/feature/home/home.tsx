@@ -19,8 +19,8 @@ const Home: React.FunctionComponent<HomeProps> = (props) => {
     {
       key: 'video',
       icon: 'icon-meeting',
-      title: 'Audio, video and share',
-      description: 'Gallery Layout, Start/Stop Audio, Mute/Unmute, Start/Stop Video, Start/Stop Screen Share'
+      title: 'Join Meeting',
+      description: ''
     }
     // {
     //   key: 'chat',
