@@ -11,7 +11,7 @@ import { b64DecodeUnicode, generateVideoToken } from './utils/util';
 
 let meetingArgs: any = Object.fromEntries(new URLSearchParams(location.search));
 // Add enforceGalleryView to turn on the gallery view without SharedAddayBuffer
-if (!meetingArgs.sdkKey || !meetingArgs.topic || !meetingArgs.name || !meetingArgs.signature) {
+if (!meetingArgs.sdkKey || !meetingArgs.topic || !meetingArgs.name || !meetingArgs.signature || !meetingArgs.sessionKey) {
   meetingArgs = { ...devConfig, ...meetingArgs };
 }
 
