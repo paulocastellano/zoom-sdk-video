@@ -15,6 +15,8 @@ if (!meetingArgs.sdkKey || !meetingArgs.topic || !meetingArgs.name || !meetingAr
   meetingArgs = { ...devConfig, ...meetingArgs };
 }
 
+console.log('meetingArgs', meetingArgs);
+
 if (meetingArgs.web && meetingArgs.web !== '0') {
   ['topic', 'name', 'password', 'sessionKey', 'userIdentity'].forEach((field) => {
     if (Object.hasOwn(meetingArgs, field)) {

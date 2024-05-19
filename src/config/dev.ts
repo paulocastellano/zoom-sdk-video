@@ -1,5 +1,4 @@
 import { getExploreName } from '../utils/platform';
-import { v4 as uuidv4 } from 'uuid';
 
 export const devConfig = {
   sdkKey: '',
@@ -10,6 +9,6 @@ export const devConfig = {
   password: '',
   signature: '',
   sessionKey: '9c14e63b-0fe3-4a09-aaec-c75831a67e8f', // meeting id
-  userIdentity: uuidv4(),
+  userIdentity: '',
   role: 1
 };
