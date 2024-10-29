@@ -251,6 +251,7 @@ const VideoFooter = (props: VideoFooterProps) => {
     await mediaStream?.mirrorVideo(!isMirrored);
     setIsMirrored(!isMirrored);
   };
+
   const onBlurBackground = async () => {
     const isSupportVirtualBackground = mediaStream?.isSupportVirtualBackground();
     if (isSupportVirtualBackground) {
@@ -589,7 +590,6 @@ const VideoFooter = (props: VideoFooterProps) => {
         }}
         onBlurBackground={onBlurBackground}
         onSelectVideoPlayback={onSelectVideoPlayback}
-        activePlaybackUrl={activePlaybackUrl}
         cameraList={cameraList}
         activeCamera={activeCamera}
         isMirrored={isMirrored}
