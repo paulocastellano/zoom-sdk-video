@@ -23,7 +23,7 @@ interface CameraButtonProps {
 const backgrounds = [
   {
     title: 'CLF',
-    url: 'https://images.unsplash.com/photo-1715490187538-30a365fa05bd?q=80&w=1945&auto=format&fit=crop'
+    url: 'https://sigfig-engage-playground-development.s3.us-east-2.amazonaws.com/public/7805ff4e-2581-4130-9b92-1e0f222fe33b'
   },
 ];
 const CameraButton = (props: CameraButtonProps) => {
